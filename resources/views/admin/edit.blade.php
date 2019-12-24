@@ -12,7 +12,7 @@
     <input type="hidden" name="pano[id]" value="{{$pano->id}}" />
     <div class="form-group" style="display: block;">
       <label><b>Короткое название на латинице</b></label>
-      <input type="text" class="form-control" name="pano[name]" value="{{$pano->name}}" required="" />
+      <input type="text" class="form-control" name="pano[name]" value="{{$pano->name}}" disabled required="" />
       <small>Менять не рекомендуется</small>
     </div> 
     <div class="form-group" style="display: block;">

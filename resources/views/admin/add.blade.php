@@ -6,7 +6,7 @@
 
 @section('content')
   <h4>Создание панорамы</h4>
-  <form method="POST" action="/admin/add">
+  <form method="POST" enctype="multipart/form-data" action="/admin/add">
     {{ csrf_field() }}
     <div class="form-group" style="display: block;">
       <label><b>Заголовок</b></label>
@@ -26,9 +26,12 @@
           <input type="text" class="form-control" name="view[0][description]" required="" />
         </div> 
         <div class="form-group" style="display: block;">
-          <label><b>Ссылка на исходник</b></label>
-          <input type="text" class="form-control" name="view[0][url]" required="" />
-        </div> 
+          <label><b>Файл</b></label>
+          <label class="custom-file col-md-12" id="customFile">
+            <input type="file" name="view[0][jpg]" class="form-control custom-file-input">
+            <span class="custom-file-control form-control-file"></span>
+          </label>
+        </div>
         <hr />
       </div>
     </div>

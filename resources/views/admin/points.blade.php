@@ -12,9 +12,8 @@
 
 @section('content')
 
-<div id="panorama"></div>
+<div style="width:300px; height:500px" id="panorama"></div>
 
-{{asset('storage/file.txt')}}
 
 @endsection
 
@@ -61,7 +60,7 @@
             'maxHfov':0,
             'showFullscreenCtrl':false,
             "type": "equirectangular",
-            "panorama": 'http://192.168.1.33:9010/img/kruger.jpg',
+            "panorama": JSON.parse(result).url,
             'backgroundColor':['233', '228', '228'],
             'hotSpotDebug':true,
             //"hotSpots": getPointsPano1()

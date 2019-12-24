@@ -6,6 +6,7 @@ const addView = () => {
   newView.innerHTML = views.lastElementChild.innerHTML
   .replace(`<span class="badge badge-success">Вид ${counter + 1}</span>`, `<span class="badge badge-success">Вид ${counter + 2}</span>`)
   .replace(`view[${counter}][description]`, `view[${counter + 1}][description]`)
+  .replace(`view[${counter}][jpg]`, `view[${counter + 1}][jpg]`)
   .replace(`view[${counter}][url]`, `view[${counter + 1}][url]`);
   views.appendChild(newView);
 }
